@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="background:black;">
   <div id="navbar">
 
   </div>
-  <div id="main">
+  <div id="particles-js">
     <span id="header">
       <h1>Song Popularity Predictor</h1>
+      <span id="type"></span>
     </span>
     <form action="/submit" method="POST" id="form">
       <label for="url">Spotify URL:</label>
@@ -34,7 +35,21 @@
       <p>Whether you're an aspiring artist, a music producer, or a label executive, song popularity predictor is a powerful tool that can help you to make strategic decisions that maximize your chances of success in the music industry.</p>
     </div>
   </div>
-  <script src="./index.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+  <script>
+    var typed = new Typed('#type', {
+      strings: ['Predict Popularity of Songs', 'Using Spotify API'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
 </body>
 
 </html>
