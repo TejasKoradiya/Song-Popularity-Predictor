@@ -1,77 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Tilt+Prism&display=swap');
-body{
-    font-family: 'Staatliches', cursive;
-    margin:0;
-    padding:0;
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Tilt+Prism&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-#navbar{
-    background-color: #333;
-    overflow: hidden;
-    height: 50px;
-    bottom: 20px;
-    left:0;
-    right:0;
-    position: fixed;
-    width: 200px;
-    display:block;
-    margin: auto;
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  --transition: all 400ms ease;
 }
 
-#header{
-    margin: 0px 100px;
-    font-size: 40px;
-    font-family: 'Tilt Prism', cursive; 
-    color:white;
+body {
+  font-family: "Staatliches", cursive;
+  background: var(--color-bg);
+  color: var(--color-white);
 }
 
-#main{
-    width:100%;
-    height: 500px;
-    background:red;
-    text-align: center;
-    margin:0px;
+#header {
+  margin: 0px 100px;
+  font-size: 40px;
+  font-family: "Tilt Prism", cursive;
+  color: white;
 }
 
-#form{
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#main {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  margin: 0px;
 }
 
-#form input[type="text"]{
-    height: 30px;
-    width: 500px;
-    font-family: 'Staatliches', cursive;
+#form {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#form input[type="submit"]{
-    width: 200px;
-    font-size: 25px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,1,5,1) 50%, rgba(2,0,36,1) 100%);
-    font-family: 'Staatliches', cursive;
-    border-radius: 15px;
-    color:white;
+#form input[type="text"] {
+  height: 30px;
+  width: 500px;
+  font-family: "Staatliches", cursive;
 }
 
-#content{
-    width: 75%;
-    display: block;
-    margin:0 auto;
-    font-size: 25px;
+#form input[type="submit"] {
+  width: 200px;
+  font-size: 25px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 1, 5, 1) 50%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  font-family: "Staatliches", cursive;
+  border-radius: 15px;
+  color: white;
 }
 
-#about{
-    width:100%;
-    height: 600px;
-    background:green;
-    text-align: center;
+#content {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  font-size: 25px;
 }
 
-#about h4{
-    font-size: 40px;
-    font-family: 'Tilt Prism', cursive;
-    margin: 0px 100px;
+#about {
+  width: 100%;
+  height: 600px;
+  background: var(--);
+  text-align: center;
+}
+
+#about h4 {
+  font-size: 40px;
+  font-family: "Tilt Prism", cursive;
+  margin: 0px 100px;
+}
+
+/* ===============================================NavBar=============================================== */
+
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
 }
