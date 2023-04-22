@@ -52,7 +52,7 @@ particlesJS('particles-js',
         }
       },
       size: {
-        value: 10,
+        value: 30,
         random: true,
         anim: {
           enable: false,
@@ -90,7 +90,7 @@ particlesJS('particles-js',
           mode: "repulse"
         },
         onclick: {
-          enable: true,
+          enable: false,
           mode: "push"
         },
         resize: true

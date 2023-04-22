@@ -8,6 +8,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 :root {
@@ -34,7 +35,6 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1;
   background: var(--color-bg);
   color: var(--color-white);
 }
@@ -48,8 +48,8 @@ body {
   text-align: center;
   color: var(--color-light);
   font-size: 0.8;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem; */
 }
 
 /* =================Section Title================= */
@@ -79,6 +79,7 @@ body {
 
 .title {
   font-size: 5rem;
+  text-align: center;
 }
 
 .type-container {
@@ -92,14 +93,13 @@ body {
 
 /* =======================================Predict======================================= */
 .predict_section {
-  padding: 5vh 10vh 5vh;
+  padding: 5vh 5vh 5vh;
 }
 
 .predict_form {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
 }
 
 #form {
@@ -111,7 +111,7 @@ body {
 }
 
 #form input[type="text"] {
-  width: 60vw;
+  width: 80vw;
   height: 2.5rem;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -136,7 +136,7 @@ body {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 20px;
   margin: 0 5px 10px 0;
@@ -178,8 +178,7 @@ body {
 /* =======================================About======================================= */
 
 .about_section {
-  height: 60vh;
-  padding: 5vh 10vh 5vh;
+  padding: 5vh 20vh 5vh;
 }
 /* 
 #content {
@@ -191,8 +190,6 @@ body {
 
 #about {
   width: 100%;
-  height: 600px;
-  /* background: var(--); */
   /* text-align: center; */
 }
 
@@ -222,7 +219,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15vw;
+  /* height: 15vw; */
+  width: 100vw;
   margin-bottom: 1rem;
 }
 
@@ -230,15 +228,11 @@ body {
   color: var(--color-white);
   font-size: 1.5rem;
 }
-/* =========================================NavBar======================================== */
-
-#contact {
-  height: 15vh;
-}
 
 /* =======================================NavBar========================================= */
 
 nav {
+  line-height: 1;
   background: rgba(0, 0, 0, 0.3);
   width: max-content;
   display: block;
@@ -275,7 +269,7 @@ nav a.active {
 /* ==========================================Footer============================================ */
 .footer_section {
   padding: 5vh 10vh 5vh;
-  padding-bottom: 27rem;
+  padding-bottom: 7rem;
 }
 
 .footer_text {
@@ -288,7 +282,7 @@ nav a.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 2px;
   flex-wrap: wrap;
 }
 
@@ -312,4 +306,61 @@ nav a.active {
   text-align: center;
   margin-top: 3rem;
   color: var(--color-light);
+}
+
+/* =========================Responsive================================ */
+/* -----------------------Media Queries(MD)----------------------- */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+  .about_section_container {
+    flex-direction: column-reverse;
+  }
+  .about_section {
+    padding: 5vh 10vh 5vh;
+  }
+  .about_sec_pad {
+    padding: 0.5rem 0px 0.5rem;
+  }
+  .about_left_section p {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .about_left_bottom {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
+
+/* -----------------------Media Queries(SM)----------------------- */
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .about_section {
+    padding: 5vh 5vh 5vh;
+  }
+  .about_left_section p {
+    font-size: 1.05rem;
+  }
+  .about_left_bottom {
+    font-size: 1.05rem;
+  }
+  #form label {
+    font-size: 1.5rem;
+  }
+  #form input[type="text"] {
+    height: 2rem;
+    padding: 0.5rem;
+  }
+  .button-50 {
+    font-size: 1.1rem;
+  }
+  .footer_section {
+    padding: 5vh 5vh 5vh;
+  }
 }
