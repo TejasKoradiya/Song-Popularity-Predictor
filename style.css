@@ -1,77 +1,366 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Tilt+Prism&display=swap');
-body{
-    font-family: 'Staatliches', cursive;
-    margin:0;
-    padding:0;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  overflow-x: hidden;
 }
 
-#navbar{
-    background-color: #333;
-    overflow: hidden;
-    height: 50px;
-    bottom: 20px;
-    left:0;
-    right:0;
-    position: fixed;
-    width: 250px;
-    display:block;
-    margin: auto;
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  --transition: all 400ms ease;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-#header{
-    margin: 0px 100px;
-    font-size: 40px;
-    font-family: 'Tilt Prism', cursive; 
-    color:white;
+::-webkit-scrollbar {
+  display: none;
 }
 
-#particles-js{
-    width:100%;
-    height: 500px;
-    background:red;
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+}
+
+.bg-image {
+  background-image: url("/images/bg-texture.png");
+}
+
+/* =================Section Title Upper================= */
+.section-title-upper {
+  text-align: center;
+  color: var(--color-light);
+  font-size: 0.8;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem; */
+}
+
+/* =================Section Title================= */
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+/* =======================================Header======================================= */
+#particles-js {
+  height: 100vh;
+  width: 100vw;
+}
+
+#header {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.title {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.type-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 3px;
+  font-size: 1.5rem;
+}
+
+/* =======================================Predict======================================= */
+.predict_section {
+  padding: 5vh 5vh 5vh;
+}
+
+.predict_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form {
+  font-size: 30px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#form input[type="text"] {
+  width: 80vw;
+  height: 2.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+.form_button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-50 {
+  appearance: button;
+  backdrop-filter: blur(5px);
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid var(--color-bg-variant);
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: var(--color-bg) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+/* =======================================About======================================= */
+
+.about_section {
+  padding: 5vh 20vh 5vh;
+}
+/* 
+#content {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  font-size: 25px;
+} */
+
+#about {
+  width: 100%;
+  /* text-align: center; */
+}
+
+.about_section_container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.about_sec_pad {
+  padding: 1rem 0px 1rem;
+  line-height: 1.8rem;
+}
+
+.about_left_section p {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.about_right_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 15vw; */
+  width: 100vw;
+  margin-bottom: 1rem;
+}
+
+.about_left_bottom {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+/* =======================================NavBar========================================= */
+
+nav {
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* ==========================================Footer============================================ */
+.footer_section {
+  padding: 5vh 10vh 5vh;
+  padding-bottom: 7rem;
+}
+
+.footer_text {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 2rem 0px 1.5rem;
+}
+
+.contact-mails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.contact-mails a {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  padding: 1rem;
+  background: transparent;
+}
+
+.contact-mails a:hover {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-light);
+  border-left: 1px solid var(--color-light);
+  border-radius: 25px;
+}
+
+.copy-rite {
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--color-light);
+}
+
+/* =========================Responsive================================ */
+/* -----------------------Media Queries(MD)----------------------- */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+  .about_section_container {
+    flex-direction: column-reverse;
+  }
+  .about_section {
+    padding: 5vh 10vh 5vh;
+  }
+  .about_sec_pad {
+    padding: 0.5rem 0px 0.5rem;
+  }
+  .about_left_section p {
     text-align: center;
-    margin:0px;
-}
-
-#form{
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#form input[type="text"]{
-    height: 30px;
-    width: 500px;
-    font-family: 'Staatliches', cursive;
-}
-
-#form input[type="submit"]{
-    width: 200px;
-    font-size: 25px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,1,5,1) 50%, rgba(2,0,36,1) 100%);
-    font-family: 'Staatliches', cursive;
-    border-radius: 15px;
-    color:white;
-}
-
-#content{
-    width: 75%;
-    display: block;
-    margin:0 auto;
-    font-size: 25px;
-}
-
-#about{
-    width:100%;
-    height: 600px;
-    background:green;
+    font-size: 1.3rem;
+  }
+  .about_left_bottom {
     text-align: center;
+    font-size: 1.3rem;
+  }
 }
 
-#about h4{
-    font-size: 40px;
-    font-family: 'Tilt Prism', cursive;
-    margin: 0px 100px;
+/* -----------------------Media Queries(SM)----------------------- */
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .about_section {
+    padding: 5vh 5vh 5vh;
+  }
+  .about_left_section p {
+    font-size: 1.05rem;
+  }
+  .about_left_bottom {
+    font-size: 1.05rem;
+  }
+  #form label {
+    font-size: 1.5rem;
+  }
+  #form input[type="text"] {
+    height: 2rem;
+    padding: 0.5rem;
+  }
+  .button-50 {
+    font-size: 1.1rem;
+  }
+  .footer_section {
+    padding: 5vh 5vh 5vh;
+  }
 }

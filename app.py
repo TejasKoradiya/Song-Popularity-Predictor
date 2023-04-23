@@ -19,15 +19,15 @@ def preprocess(url):
 def home():
     return render_template("index.html")
 
-@app.route('/submit', methods=['POST','GET'])
+@app.route('/submit.html', methods=['POST','GET'])
 def submit():
     url = request.form['url']
     test_vals,test_feat = preprocess(url)
     model = pk.load(open("flaskmodel.pkl","rb"))
     otp = model.predict(test_vals)
     feat_format = "<br>".join([f"{key} = {value}" for key,value in zip(test_feat.keys(),test_feat.values())])
-    print("Prediction: ",otp)
-    return "Prediction: {} <br><br> Features: <br>{}".format(otp[0],feat_format)
+    popularity = "Popularity = {} <br> Features:<br>".format(otp[0])
+    return render_template('submit.html',popularity = popularity,features = feat_format)
 
 if __name__ == '__main__':
     app.run(port=5500)
