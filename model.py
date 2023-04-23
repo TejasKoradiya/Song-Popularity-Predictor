@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
 
 
 df = pd.read_csv('C:\\Users\\Dell\\OneDrive\\Desktop\\Project3\\Dataset\\dataset.csv')
@@ -73,17 +74,20 @@ predictionsClass2 = classifier2.predict(X_test_scaled2)
 
 #5
 dtR = DecisionTreeRegressor().fit(X_train, y_train)
-print(X_test)
+# print(X_test)
 predictionsR2 = dtR.predict(X_test)
 
 #6
 dtR_Scaled = DecisionTreeRegressor().fit(X_train_scaled, y_train)
 predictionsR2_scaled = dtR_Scaled.predict(X_test_scaled)
 
+#7
+rfr = RandomForestRegressor(random_state = 42, max_leaf_nodes = 20).fit(X_train, y_train)
+predictionsRfr = rfr.predict(X_test)
 
 # lr = LinearRegression()
 # lr.fit(X,Y)
-pk.dump(dtR,open('flaskmodel.pkl','wb'))
+pk.dump(rfr,open('flaskmodel.pkl','wb'))
 
 #pickle to access the model outside this file
 # testmodel = pk.load(open('flaskmodel.pkl','rb'))
