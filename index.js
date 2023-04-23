@@ -10,14 +10,25 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 // =============From==============
-function required() {
-    var empt = document.forms["prediction-form"]["url"].value;
-    if (empt == "") {
-        alert("Please input a Value");
-        return false;
+const form = document.querySelector('form');
+const urlInput = form.querySelector('#url');
+const errorLabel = form.querySelector("#error-label");
+const formClear = form.querySelector("#form-clear");
+
+form.addEventListener('submit', (event) => {
+    if (urlInput.value.trim() === '') {
+        event.preventDefault(); // prevent form submission
+        urlInput.classList.add('error');
+        formClear.classList.add('error-right');
+        errorLabel.classList.remove('error-label-remove');
+        errorLabel.classList.add('error-label-add');
+        urlInput.focus();
     }
-    else {
-        action = "/submit"
-        return true;
-    }
+});
+
+//===================================
+function clearInput() {
+    const urlInput = form.querySelector('#url');
+    urlInput.value = '';
+    urlInput.focus();
 }
