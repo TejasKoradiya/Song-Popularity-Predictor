@@ -8,6 +8,7 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+<<<<<<< HEAD
 
 // =============From==============
 function required() {
@@ -21,3 +22,5 @@ function required() {
         return true;
     }
 }
+=======
+>>>>>>> ef00d51e9c3a198e0a8cb538cac4cadd96a7c776

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+=======
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Tilt+Prism&display=swap");
+>>>>>>> ef00d51e9c3a198e0a8cb538cac4cadd96a7c776
 
 * {
   margin: 0;
@@ -8,7 +12,10 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+<<<<<<< HEAD
   overflow-x: hidden;
+=======
+>>>>>>> ef00d51e9c3a198e0a8cb538cac4cadd96a7c776
 }
 
 :root {
@@ -25,6 +32,7 @@
 
   --transition: all 400ms ease;
 }
+<<<<<<< HEAD
 html {
   scroll-behavior: smooth;
 }
@@ -35,10 +43,16 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+=======
+
+body {
+  font-family: "Staatliches", cursive;
+>>>>>>> ef00d51e9c3a198e0a8cb538cac4cadd96a7c776
   background: var(--color-bg);
   color: var(--color-white);
 }
 
+<<<<<<< HEAD
 .bg-image {
   background-image: url("/images/bg-texture.png");
 }
@@ -100,10 +114,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+#header {
+  margin: 0px 100px;
+  font-size: 40px;
+  font-family: "Tilt Prism", cursive;
+  color: white;
+}
+
+#main {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  margin: 0px;
+>>>>>>> ef00d51e9c3a198e0a8cb538cac4cadd96a7c776
 }
 
 #form {
   font-size: 30px;
+<<<<<<< HEAD
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -179,6 +208,11 @@ body {
 
 .about_section {
   padding: 5vh 20vh 5vh;
+=======
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+>>>>>>> ef00d51e9c3a198e0a8cb538cac4cadd96a7c776
 }
 /* 
 #content {
@@ -188,6 +222,7 @@ body {
   font-size: 25px;
 } */
 
+<<<<<<< HEAD
 #about {
   width: 100%;
   /* text-align: center; */
@@ -363,4 +398,81 @@ nav a.active {
   .footer_section {
     padding: 5vh 5vh 5vh;
   }
+=======
+#form input[type="text"] {
+  height: 30px;
+  width: 500px;
+  font-family: "Staatliches", cursive;
+}
+
+#form input[type="submit"] {
+  width: 200px;
+  font-size: 25px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 1, 5, 1) 50%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  font-family: "Staatliches", cursive;
+  border-radius: 15px;
+  color: white;
+}
+
+#content {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  font-size: 25px;
+}
+
+#about {
+  width: 100%;
+  height: 600px;
+  background: var(--);
+  text-align: center;
+}
+
+#about h4 {
+  font-size: 40px;
+  font-family: "Tilt Prism", cursive;
+  margin: 0px 100px;
+}
+
+/* ===============================================NavBar=============================================== */
+
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+>>>>>>> ef00d51e9c3a198e0a8cb538cac4cadd96a7c776
 }
